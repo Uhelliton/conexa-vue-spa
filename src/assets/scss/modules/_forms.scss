@@ -1,0 +1,42 @@
+@import '../utilities/all';
+
+.m-input {
+  label {
+    font-size: $font--xsl;
+    font-weight: 400;
+    color: #3F4254;
+    input {
+      margin-bottom: pxToRem(10);
+    }
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 1.3rem + 2px);
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-gray;
+    background-color: $color-white;
+    background-clip: padding-box;
+    border: 1px solid $color-gris-05;
+    border-radius: 0.42rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.m-form {
+  &_content {
+    max-width: pxToRem(492);
+  }
+
+  &_action {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: pxToRem(40);
+  }
+}

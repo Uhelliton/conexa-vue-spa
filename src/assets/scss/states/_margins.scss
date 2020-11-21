@@ -1,0 +1,29 @@
+@import '../utilities/all';
+
+@each $size, $val in $map-sizes {
+  .s-m--#{$size} {
+    margin: $val;
+  }
+
+  .s-mb--#{$size} {
+    margin-bottom: $val;
+  }
+
+  .s-mt--#{$size} {
+    margin-top: $val;
+  }
+
+  .s-mx--#{$size} {
+    margin: {
+      left: $val;
+      right: $val;
+    }
+  }
+
+  .s-my--#{$size} {
+    margin: {
+      top: $val;
+      bottom: $val;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import '../utilities/all';
+
+.m-button {
+  outline: none;
+  vertical-align: middle;
+  height: pxToRem(30);
+  padding: pxToRem(2) pxToEm(20);
+  border: none;
+  background: $color-primary;
+  color: $color-white;
+  font: {
+    size: $font--xs ;
+  };
+  cursor: pointer;
+  @extend %rounded-corners;
+
+  &--reset {
+    @extend %reset-btn;
+    color: currentColor;
+  }
+
+  &--sm {
+    height: pxToRem(36);
+  }
+
+  &--fullWith {
+   width: 100%!important;
+  }
+
+  &--warning{
+    color: $color-warning!important;
+  }
+
+  &--disabled{
+    background: $color-gris-03;
+  }
+
+  &--link {
+    @extend %reset-link;
+    color: $color-dark-02;
+    display: inline-block;
+    font-size: $font--xsl;
+    font-weight: 600;
+    line-height: pxToRem(20);
+    padding: pxToRem(8) $gap-rem--xs;
+    text-transform: capitalize;
+    transition: color .15s linear;
+
+    &:visited {
+      color: $color-dark-02;
+    }
+
+    &:hover, &:focus {
+      color: rgba($color-dark-02, .75);
+    }
+  }
+}
