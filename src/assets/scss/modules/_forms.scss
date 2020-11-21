@@ -10,10 +10,9 @@
     }
   }
 
-  input {
+  input, textarea {
     display: block;
     width: 100%;
-    height: calc(1.5em + 1.3rem + 2px);
     padding: 0.65rem 1rem;
     font-size: 1rem;
     font-weight: 400;
@@ -25,6 +24,24 @@
     border-radius: 0.42rem;
     -webkit-box-shadow: none;
     box-shadow: none;
+
+    &:focus {
+      outline: none !important;
+      border-color: #97c7fa;
+      box-shadow: 0 0 pxToRem(6) #97c7fa;
+    }
+
+    &:disabled {
+      background-color: $color-light-03;
+    }
+  }
+
+  input {
+    height: calc(1.5em + 1.3rem + 2px);
+  }
+
+  textarea {
+    height: calc(4em + 4rem + 2px);
   }
 }
 

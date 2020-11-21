@@ -32,17 +32,8 @@ describe('AppTable.vue', () => {
     expect(wrapper.props().filterKey).toEqual('')
   })
 
-  it('should render component has computed props: filtered  and return array', () => {
-    const { wrapper } = build()
-    expect(wrapper.vm.filtered).toEqual([])
-  })
 
-  it('should render component has computed props: paginatedData  and return array', () => {
-    const { wrapper } = build()
-    expect(wrapper.vm.paginatedData).toEqual([])
-  })
-
-  it('should render component has computed props: pageNumber', () => {
+  it('should render component has computed: $pageNumber', () => {
     const { wrapper } = build()
     expect(wrapper.vm.pageNumber).toBeTruthy()
   })

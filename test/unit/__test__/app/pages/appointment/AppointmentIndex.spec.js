@@ -2,17 +2,31 @@
 /**
  * @jest-environment node
  */
-import { shallowMount } from '@vue/test-utils'
-import UserTable from '@/app/pages/dashboard/components/UserTable'
+import { shallowMount, config  } from '@vue/test-utils'
+import AppointmentIndex from '@/app/pages/appointment/views/AppointmentIndex'
 import CardBox from '@/components/layouts/CardBox'
 import AppTable from '@/components/table/AppTable'
 import AppInput from '@/components/form/AppInput'
 import flushPromises from "flush-promises"
 
+config.showDeprecationWarnings = false
 
-describe('UserTable.vue', () => {
+describe('AppointmentIndex.vue', () => {
+  const mockRoute = {
+    params: { id: 1 }
+  }
+  const mockRouter = { push: jest.fn() }
+
   const build = () => {
-    const wrapper = shallowMount(UserTable)
+    const wrapper = shallowMount(AppointmentIndex, {
+      stubs: ['router-link'],
+      global: {
+        mocks: {
+          $route: mockRoute,
+          $router: mockRouter
+        }
+      }
+    })
 
     return {
       wrapper,
@@ -45,16 +59,23 @@ describe('UserTable.vue', () => {
     expect(forId).toBeTruthy()
   })
 
-  it('should contain method fetchUsers()', () => {
+  it('should contain method fetchAppointments()', () => {
     const { wrapper } = build()
-    expect(wrapper.vm.fetchUsers).toBeTruthy()
+    expect(wrapper.vm.fetchAppointments).toBeTruthy()
   })
 
-  it("should contain datatable.rows fetchUsers", async () => {
+  it("should contain datatable.rows fetchAppointments()", async () => {
     const { wrapper } = build()
 
     await flushPromises()
     expect(wrapper.vm.datatable.rows.length).toBe(0)
+  })
+
+  it("should contain button add and redirect to create", async () => {
+    const { wrapper } = build()
+
+    const btn = wrapper.find({ ref: 'appointment-create' })
+    expect(btn.text()).toContain('+ Nova Consulta')
   })
 
 })

@@ -47,6 +47,7 @@
 
 .row {
   display: grid;
+  grid-gap: pxToRem(20);
 }
 .col-6 {
   grid-template-columns: 1fr;

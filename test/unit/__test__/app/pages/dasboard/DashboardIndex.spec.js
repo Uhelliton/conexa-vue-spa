@@ -4,7 +4,6 @@
  */
 import { shallowMount } from '@vue/test-utils'
 import DashboardIndex from '@/app/pages/dashboard/views/DashboardIndex'
-import UserTable from '@/app/pages/dashboard/components/UserTable'
 
 describe('DashboardIndex.vue', () => {
   const build = () => {
@@ -12,7 +11,6 @@ describe('DashboardIndex.vue', () => {
 
     return {
       wrapper,
-      UserTable: () => wrapper.findComponent(UserTable)
     }
   }
 
@@ -21,9 +19,4 @@ describe('DashboardIndex.vue', () => {
     expect(wrapper.vm).toBeTruthy()
   })
 
-  it('renders main children components', () => {
-    const { UserTable } =  build()
-
-    expect(UserTable().exists()).toBe(true)
-  })
 })

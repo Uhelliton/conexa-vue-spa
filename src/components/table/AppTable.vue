@@ -21,11 +21,6 @@ export default {
     filterKey: {
       type: String,
       required: false
-    },
-    paginate: {
-      type: Object,
-      required: false,
-      default: () => {}
     }
   },
   computed: {
@@ -70,14 +65,5 @@ export default {
       <slot name="tbody"></slot>
       </tbody>
     </table>
-    <ul class="m-pagination"  data-pagination="pagination">
-      <li :key="index"
-          class="m-pagination_item"
-          v-for="(pagination, index) in paginate.last_page"
-          :class="{'m-pagination_item--active': pageNumber === pagination}"
-          @click="goToPage(pagination)">
-        {{ pagination }}
-      </li>
-    </ul>
   </div>
 </template>

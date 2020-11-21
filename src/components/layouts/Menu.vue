@@ -12,12 +12,8 @@ export default {
         router: '/dashboard',
         icon: 'ic-panel'
       }, {
-        name: 'Tarefas',
-        router: '/tasks',
-        icon: 'ic-panel'
-      }, {
-        name: 'Usuários',
-        router: '/users',
+        name: 'Consultas',
+        router: '/appointments',
         icon: 'ic-panel'
       }
     ]

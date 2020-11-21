@@ -34,6 +34,7 @@ export default {
         const { data: response, status } = res
         if (status === 200 && 'data' in response) {
           const data = response.data
+          data['id'] = 1
 
           commit(CHANGE_USER, data)
           commit(CHANGE_TOKEN, data.token)

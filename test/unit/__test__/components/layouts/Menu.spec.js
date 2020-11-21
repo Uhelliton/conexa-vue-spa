@@ -57,7 +57,7 @@ describe('Menu.vue', () => {
     const wrapper = shallowMount(Menu, {
       localVue,
       store,
-      stubs: {}
+      stubs: ['router-link']
     })
 
     return {
