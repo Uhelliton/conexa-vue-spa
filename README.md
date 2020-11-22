@@ -9,10 +9,10 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
 ``` bash
 # Clone este repositório
-$ git clone <https://gitlab.com/conexasaude-public/desafio-tecnico-frontend-conexa.git>
+$ git clone <https://github.com/Uhelliton/conexa-vue-spa.git>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd desafio-tecnico-frontend-conexa
+$ cd conexa-vue-spa
   
 # Instale as dependências
 npm install
