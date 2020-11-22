@@ -1,27 +1,57 @@
-Descrição:
-Precisamos construir um front onde nossos médicos de plantão consigam agendar atendimentos para os pacientes e listar os atendimentos agendados.
+# CONEXASAUDE VUE SPA
 
-Será necessário ter uma tela de login para que médicos da clínica Conexa Saúde consigam acessar a aplicação, utilizando email e senha (Podem realizar o login com qualquer usuário de teste).
-O response do login será um token de validação e o nome do médico.
+> 
+> Construção de uma aplicação SPA(Single Page Applications)
+> 
 
-O médico poderá cadastrar, listar e detalhar uma consulta.
+## Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+``` bash
+# Clone este repositório
+$ git clone <https://gitlab.com/conexasaude-public/desafio-tecnico-frontend-conexa.git>
 
-Link da API: http://desafio.conexasaude.com.br/swagger-ui.html#/desafio-rest
+# Acesse a pasta do projeto no terminal/cmd
+$ cd desafio-tecnico-frontend-conexa
+  
+# Instale as dependências
+npm install
 
-Requisitos:
+# Execute a aplicação em modo de desenvolvimento
+npm run dev
 
-* Desenvolver uma aplicação usando Vue JS;
-* Clonar este repositório, criar uma nova branch e abrir um merge request para master;
+# O servidor inciará na porta:8080 - acesse <http://localhost:8080>
 
-Serão avaliados os seguintes itens:
+# construir o app para produção com minificação
+npm run build
 
-* Clareza do código;
-* Estrutura criada para a aplicação;
-* Se os requisitos descritos acima foram atendidos;
-* Se possui descrição clara de como montar o ambiente local e realizar os testes (se houverem);
+# executar testes de unidade
+npm run unit
 
-Em caso de dúvidas sobre o desafio, entre em contato.
+# executar todos testes
+npm test
+```
 
-Adicionamos um projeto do Postman para auxílio.
+### 🛠 Tecnologias
 
-Lembre-se que uma boa aplicação é bem testada.
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Vue.js](https://vuejs.org/v2/guide/)
+- [Vue Test Utils](https://vue-test-utils.vuejs.org/guides/)
+- [Jest js](https://jestjs.io/)
+- [Sass](https://sass-lang.com/)
+- [Eslint](https://eslint.org/)
+
+### 🎲 Arquitetura
+
+As seguintes arquitetura e metodologia css foram usadas:
+
+- [BEM](http://getbem.com/)
+- [SMACSS](http://smacss.com/)
+
+### Funcionalidade desenvolvidas
+
+- [x] Tela de Login
+- [x] Dashboard
+- [x] CRUD de consultas
+
